@@ -1,0 +1,20 @@
+	Requisitos para la instalacion
+
+-- Tener instalado Version de PHP 8.1 a superiores.
+-- Tener instalado Composer.
+-- Tener instalado Node js.
+-- Tener instalado Git.													
+
+	Comandos para instalar
+	
+-- composer create-project laravel/laravel example-app (Instalacion por composer).
+-- composer global require laravel/installer:^5.2(Podemos poner la version que se requiere) -> laravel new example-app
+
+	Extensiones para trabajar con Laravel
+
+-- Laravel blade formatter
+-- Laravel blade snippets
+-- Laravel got view
+-- Laravel snippets
+-- PHP Intelephense
+-- 

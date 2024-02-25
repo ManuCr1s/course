@@ -1,0 +1,33 @@
+MIGRACIONES
+
+Control de versiones de la base de datos, permite definir y comprati la definicion
+del esquema de la base de datos de la aplicacion.
+Las migraciones son clases de PHP que nos permiten modifcar esquemas
+ya que nos devuleve un clase anonima y en ella podemos encontrar dos emtodos
+up(para crear y modificar) y down(quitar o deshacer).
+
+
+- Generacion de migraciones
+		--Para crear las migraciones de creacion de tablas
+		--Se utiliza la clase schema que recibe dos parametros,
+			nombre de la tabla y un parametro del tipo BLUEPRINT
+			con sus respectivos metodos.
+			
+			php artisan make:migration create_users_table 
+
+		--Para agregar una columna en una tabla ya existente
+		--Se utiliza de nuevo la clase Schema pero ahora utilizamos el metodo table
+		que recibe igual dos parametros, nombre tabla y clase del tipo post.
+			
+			php artisan make:migration add_campoaagregar_to_users_table
+
+-Arquitectura de migraciones
+
+		Migrar todas las migraciones
+		--php artisan migrate
+
+		Quitar todas las migraciones: Solo devuelve las migraciones del ultimo lote
+		--php artisan migrate:rollback 
+
+		Elimina todas las tablas creadas por las migraciones y las vuelve a crear.
+		--php artisan migrate:fresh
